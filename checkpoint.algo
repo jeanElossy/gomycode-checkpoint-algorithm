@@ -1,0 +1,32 @@
+// Là, on est obligé de compter par une boucle le nombre d'espaces de la phrase, et on en déduit le nombre de mots. La boucle examine les caractères de la phrase un par un, du premier au dernier, et les compare à l'espace.
+
+ALGORITHM Lecture de phrase
+VAR
+  phrase : STRING;
+  nbre_mot, i, nbre_voyelle, long_phrase : INTEGER;
+  nbre_mot := 0
+  long_phrase := 0
+  nbre_voyelle := "aeiouy"
+BEGIN
+  Write "Entrez une phrase"
+  Read phrase
+  FOR i = 0 TO phrase DO
+    IF phrase[i] = " " THEN
+      nbre_mot = LENGTH(nbre_mot + 1)
+    END_IF
+  i = i + 1
+  END_FOR
+
+  Write "Cette phrase compte ", nbre_mot, " mots"
+  Write "La longueur de la phrase est :", long_phrase = LENGHT(nbre_mot)
+
+  FOR i = 0 TO phrase DO
+    IF phrase[i] = nbre_voyelle[i] THEN
+      nbre_voyelle = LENGTH(nbre_voyelle + 1)
+    END_IF
+  i = i + 1
+  END_FOR
+
+  Write "Le nombre de voyelle dans la phrase est :", nbre_voyelle
+
+END
